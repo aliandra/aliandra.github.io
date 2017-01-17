@@ -3,13 +3,13 @@
 #
 
 # Name of your site (displayed in the header)
-name: Alexandra
+name: Numerology and Grammatica
 
 # Short bio or description (displayed in the header)
-description: Something here
+description: a N.E.W.T. level examination of arithmancy, data science, and everyday life
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: https://avatars1.githubusercontent.com/u/15183936?v=3&s=460
 
 #
 # Flags below are optional
@@ -18,12 +18,12 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: alexandra.m.phelan@gmail.com
   facebook:
   flickr:
   github: aliandra
   instagram:
-  linkedin:
+  linkedin: alexandramphelan
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: 
