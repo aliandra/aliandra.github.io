@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello World!
-thumnnail: /images/metis_day1.jpg
+thumbnail: /images/metis_day1.jpg
 ---
 
 obligatory first post
