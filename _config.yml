@@ -85,4 +85,4 @@ exclude:
   - README.md
   - CNAME
 
-headerimg: images/jekyll-logo.png
+headerimg: /images/jekyll-logo.png
