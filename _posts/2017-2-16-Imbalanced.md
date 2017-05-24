@@ -11,9 +11,9 @@ dealing with imbalanced classes in a classification problem
 *Beautiful day at Croton Point Park*
 
  
-While working on my first classification project, after spending days gathering, cleaning, exploring, and feature engineering my data, I was finally ready to throw it all in a model! I used sklearn's logistic regression to build the model, and once the training was done, checked the model's accuracy on my test data. I almost couldn't believe my eyes- 85% accuracy! And on my first try. I thought it was too good to be true... wait, is it too good to be true? I dove back into my data and realized that about 85% of the observations belonged to one class. For this post I want to share what I learned about imbalanced classes.
+While working on my first classification project, after spending significant time gathering, cleaning, exploring, and feature engineering my data, I was finally ready to throw it all in a model! I used sklearn's logistic regression to build the model. Once the training was complete, I checked the model's accuracy with the test data. I almost couldn't believe my eyes- 85% accuracy! And on my first try. I thought it was too good to be true... wait, is it too good to be true? I dove back into my data and realized that 85% of the observations belonged to one class. For this post I want to share what I learned about imbalanced classes.
 
-An imbalanced class distribution occurs when classes are not represented equally in the dataset. The majority class contains significantly more observations than the minority class. This can create bias in your model since the classification algorithm will be trained on data largely influenced by the majority class. Most algorithms are accuracy driven and want to optimize the error rate (percentage of incorrect predictions). This means it will ignore the data distribution and treat all misclassification errors equally, potentially predicting the majority class in every example (which is what happened in my case). 
+An imbalanced class distribution occurs when classes are not represented equally in a dataset. The majority class contains significantly more observations than the minority class. This can create bias in your model since the classification algorithm will be trained on data largely influenced by the majority class. Most algorithms are accuracy driven and want to optimize the error rate (percentage of incorrect predictions). This means it will ignore the data distribution and treat all misclassification errors equally, potentially predicting the majority class in every example (which is what happened in my case). 
 
 Here are some possible solutions:
 
@@ -21,9 +21,10 @@ Here are some possible solutions:
 We can balance our classes by randomly selecting observations from the minority class to be replicated in the dataset. Basically we are adding additional copies of preexisting examples to the dataset to artificially balance the classes. The biggest drawbacks to this method is that it can promote overfitting where predictions on unseen data might be worse.
 
 ### Random Undersampling
-Similar to oversampling, we can undersample by randomly selecting observations in the majority class to be included in the dataset, while leaving the other majority cases out. By ignoring some of the majority class examples, we can better balance the data. The main drawback with this technique is that we are throwing away potentially useful data. 
+Similar to oversampling, we can undersample by randomly selecting observations in the majority class to be included in the training data, while leaving the other majority cases out. By ignoring some of the majority class examples, we can better balance the data. The main drawback with this technique is that we are throwing away potentially useful data. 
 
 ### Change Performance Metrics
-When it comes to imbalanced data, using an accuracy metric can be misleading. Try looking at Precision (measures how many observations) and Recall() metrics instead. If you're a visual person like me, generate a Confusion Matrix.
+When it comes to imbalanced data, using an accuracy metric can be misleading. Try looking at Precision and Recall metrics instead. If you're a visual person like me, generate a Confusion Matrix.  
+
 
 When all else fails, get creative! Dig around on the internet and see what others have done to solve this problem. There are many other interesting methods I've read on StackOverflow and Quora such as generating synthetic observations, using informed undersampling, penalized models, and more. Happy Classifying!
